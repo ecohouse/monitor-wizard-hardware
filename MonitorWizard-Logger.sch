@@ -9464,6 +9464,259 @@ Spark Fun Electronics SKU : COM-00107</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="RHT03_DHT-22_AM2302">
+<description>&lt;h1&gt;RHT03 / DHT-22 / AM2302 library&lt;/h1&gt;
+&lt;p&gt;
+Library with devices (schematic symbol and packages) for the RHT03 / DHT-22 / AM2302 digital relative humidity and tempearture sensor.&lt;br /&gt;
+Warning: Package does not include tKeepout areas so that the part may optionally be placed on a riser with components underneath.  Please keep the package outline and bent-pin space in mind.
+&lt;/p&gt;</description>
+<packages>
+<package name="RHT03_DHT-22">
+<description>&lt;h1&gt;RHT03 / DHT-22&lt;/h1&gt;
+&lt;p&gt;
+Package for the RHT03 / DHT-22 relative humidity and temperature sensor.
+&lt;/p&gt;</description>
+<pad name="VDD" x="-3.81" y="0" drill="0.8" shape="octagon"/>
+<pad name="DATA" x="-1.27" y="0" drill="0.8"/>
+<pad name="NULL" x="1.27" y="0" drill="0.8"/>
+<pad name="GND" x="3.81" y="0" drill="0.8"/>
+<wire x1="-7.55" y1="2.5" x2="7.55" y2="2.5" width="0.127" layer="21"/>
+<wire x1="-7.55" y1="-5.2" x2="7.55" y2="-5.2" width="0.127" layer="21"/>
+<wire x1="-7.55" y1="2.5" x2="-7.55" y2="0.8" width="0.127" layer="21"/>
+<wire x1="-7.55" y1="0.8" x2="-7.55" y2="-5.2" width="0.127" layer="21"/>
+<wire x1="7.55" y1="2.5" x2="7.55" y2="0.8" width="0.127" layer="21"/>
+<wire x1="7.55" y1="0.8" x2="7.55" y2="-5.2" width="0.127" layer="21"/>
+<wire x1="-7.55" y1="0.8" x2="7.55" y2="0.8" width="0.127" layer="21"/>
+<text x="-6" y="-4.5" size="1.27" layer="21" font="vector">&gt;NAME</text>
+<text x="-6" y="-2.5" size="1.27" layer="21" font="vector">&gt;VALUE</text>
+</package>
+<package name="AM2302">
+<description>&lt;h1&gt;AM2302&lt;/h1&gt;
+&lt;p&gt;
+Package for the AM2302 wired variant of the RHT03/DHT-22 relative humidity and temperature sensor.
+&lt;/p&gt;</description>
+<pad name="VDD" x="-3.81" y="0" drill="0.8" shape="octagon"/>
+<pad name="DATA" x="-1.27" y="0" drill="0.8"/>
+<pad name="NULL" x="1.27" y="0" drill="0.8"/>
+<pad name="GND" x="3.81" y="0" drill="0.8"/>
+<text x="-5.08" y="-2.667" size="1.27" layer="21" font="vector">&gt;NAME</text>
+<wire x1="-5.08" y1="-0.635" x2="-4.445" y2="-1.27" width="0.127" layer="21"/>
+<wire x1="-4.445" y1="-1.27" x2="5.08" y2="-1.27" width="0.127" layer="21"/>
+<wire x1="5.08" y1="-1.27" x2="5.08" y2="1.27" width="0.127" layer="21"/>
+<wire x1="5.08" y1="1.27" x2="-5.08" y2="1.27" width="0.127" layer="21"/>
+<wire x1="-5.08" y1="1.27" x2="-5.08" y2="-0.635" width="0.127" layer="21"/>
+<text x="-5.08" y="1.397" size="1.27" layer="21">&gt;VALUE</text>
+</package>
+<package name="RHT03_DHT-22/RA">
+<description>&lt;h1&gt;RHT03 / DHT-22 - RIGHT ANGLE&lt;/h1&gt;
+&lt;p&gt;
+Right angle package for the RHT03 / DHT-22 relative humidity and temperature sensor.
+&lt;/p&gt;</description>
+<pad name="VDD" x="-3.81" y="0" drill="0.8" shape="octagon"/>
+<pad name="DATA" x="-1.27" y="0" drill="0.8"/>
+<pad name="NULL" x="1.27" y="0" drill="0.8"/>
+<pad name="GND" x="3.81" y="0" drill="0.8"/>
+<wire x1="-7.55" y1="2.5" x2="7.55" y2="2.5" width="0.127" layer="21"/>
+<text x="-5.08" y="5.08" size="1.27" layer="21" font="vector" rot="R90">&gt;NAME</text>
+<wire x1="-7.55" y1="2.5" x2="-7.55" y2="22.5" width="0.127" layer="21"/>
+<wire x1="7.55" y1="2.5" x2="7.55" y2="22.5" width="0.127" layer="21"/>
+<wire x1="-7.55" y1="22.5" x2="7.55" y2="22.5" width="0.127" layer="21"/>
+<wire x1="-5.25" y1="27.1" x2="5.25" y2="27.1" width="0.127" layer="21"/>
+<wire x1="7.55" y1="22.5" x2="5.25" y2="27.1" width="0.127" layer="21"/>
+<wire x1="-7.55" y1="22.5" x2="-5.25" y2="27.1" width="0.127" layer="21"/>
+<hole x="0" y="24.5" drill="3.25"/>
+<wire x1="-3.81" y1="1.27" x2="-3.81" y2="2.54" width="0.127" layer="21"/>
+<wire x1="-1.27" y1="1.27" x2="-1.27" y2="2.54" width="0.127" layer="21"/>
+<wire x1="1.27" y1="1.27" x2="1.27" y2="2.54" width="0.127" layer="21"/>
+<wire x1="3.81" y1="1.27" x2="3.81" y2="2.54" width="0.127" layer="21"/>
+<text x="0" y="12.5" size="1.27" layer="21" font="vector" rot="R90" align="center">&gt;VALUE</text>
+</package>
+</packages>
+<symbols>
+<symbol name="RHT03">
+<description>&lt;h1&gt;RHT03 / DHT-22 / AM2302&lt;/h1&gt;
+&lt;p&gt;
+Symbol for the RHT03 / DHT-22 / AM2302 relative humidity and temperature sensor.
+&lt;/p&gt;</description>
+<wire x1="-5.08" y1="10.16" x2="-5.08" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-10.16" x2="5.08" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-10.16" x2="5.08" y2="10.16" width="0.254" layer="94"/>
+<wire x1="5.08" y1="10.16" x2="-5.08" y2="10.16" width="0.254" layer="94"/>
+<pin name="VDD" x="-10.16" y="7.62" length="middle" direction="pwr"/>
+<pin name="DATA" x="-10.16" y="2.54" length="middle"/>
+<pin name="NULL" x="-10.16" y="-2.54" visible="pad" length="middle" direction="nc"/>
+<pin name="GND" x="-10.16" y="-7.62" length="middle" direction="pwr"/>
+<text x="-5.08" y="11.43" size="1.27" layer="94">&gt;NAME</text>
+<text x="-5.08" y="-12.7" size="1.27" layer="94">&gt;VALUE</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="RHT03_DHT-22_AM2302" prefix="U" uservalue="yes">
+<description>&lt;h1&gt;RHT03 / DHT-22 / AM2302&lt;/h1&gt;
+&lt;p&gt;
+Packages and symbol for the RHT03 / DHT-22 relative humidity and temperature sensor.&lt;br /&gt;
+Note: The AM2302 is a wired version of the DHT-22 which typically requires less clearance and is thus provided as a separate package.
+&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="RHT03" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="RHT03_DHT-22">
+<connects>
+<connect gate="G$1" pin="DATA" pad="DATA"/>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="NULL" pad="NULL"/>
+<connect gate="G$1" pin="VDD" pad="VDD"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="SEN-10167"/>
+</technology>
+</technologies>
+</device>
+<device name="WIRED" package="AM2302">
+<connects>
+<connect gate="G$1" pin="DATA" pad="DATA"/>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="NULL" pad="NULL"/>
+<connect gate="G$1" pin="VDD" pad="VDD"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="SEN-10167"/>
+</technology>
+</technologies>
+</device>
+<device name="RA" package="RHT03_DHT-22/RA">
+<connects>
+<connect gate="G$1" pin="DATA" pad="DATA"/>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="NULL" pad="NULL"/>
+<connect gate="G$1" pin="VDD" pad="VDD"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="SEN-10167"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+<library name="diode">
+<description>&lt;b&gt;Diodes&lt;/b&gt;&lt;p&gt;
+Based on the following sources:
+&lt;ul&gt;
+&lt;li&gt;Motorola : www.onsemi.com
+&lt;li&gt;Fairchild : www.fairchildsemi.com
+&lt;li&gt;Philips : www.semiconductors.com
+&lt;li&gt;Vishay : www.vishay.de
+&lt;/ul&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="DO35-10">
+<description>&lt;B&gt;DIODE&lt;/B&gt;&lt;p&gt;
+diameter 2 mm, horizontal, grid 10.16 mm</description>
+<wire x1="5.08" y1="0" x2="4.191" y2="0" width="0.508" layer="51"/>
+<wire x1="-5.08" y1="0" x2="-4.191" y2="0" width="0.508" layer="51"/>
+<wire x1="-0.635" y1="0" x2="0" y2="0" width="0.1524" layer="21"/>
+<wire x1="1.016" y1="0.635" x2="1.016" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="1.016" y1="-0.635" x2="0" y2="0" width="0.1524" layer="21"/>
+<wire x1="0" y1="0" x2="1.524" y2="0" width="0.1524" layer="21"/>
+<wire x1="0" y1="0" x2="1.016" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="0" y1="0.635" x2="0" y2="0" width="0.1524" layer="21"/>
+<wire x1="0" y1="0" x2="0" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="2.032" y1="1.016" x2="2.286" y2="0.762" width="0.1524" layer="21" curve="-90"/>
+<wire x1="-2.286" y1="0.762" x2="-2.032" y2="1.016" width="0.1524" layer="21" curve="-90"/>
+<wire x1="-2.286" y1="-0.762" x2="-2.032" y2="-1.016" width="0.1524" layer="21" curve="90"/>
+<wire x1="2.032" y1="-1.016" x2="2.286" y2="-0.762" width="0.1524" layer="21" curve="90"/>
+<wire x1="2.286" y1="-0.762" x2="2.286" y2="0.762" width="0.1524" layer="21"/>
+<wire x1="-2.286" y1="0.762" x2="-2.286" y2="-0.762" width="0.1524" layer="21"/>
+<wire x1="-2.032" y1="1.016" x2="2.032" y2="1.016" width="0.1524" layer="21"/>
+<wire x1="-2.032" y1="-1.016" x2="2.032" y2="-1.016" width="0.1524" layer="21"/>
+<pad name="C" x="-5.08" y="0" drill="0.8128" shape="long"/>
+<pad name="A" x="5.08" y="0" drill="0.8128" shape="long"/>
+<text x="-2.159" y="1.27" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-2.159" y="-2.667" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+<rectangle x1="-1.905" y1="-1.016" x2="-1.397" y2="1.016" layer="21"/>
+<rectangle x1="2.286" y1="-0.254" x2="4.191" y2="0.254" layer="21"/>
+<rectangle x1="-4.191" y1="-0.254" x2="-2.286" y2="0.254" layer="21"/>
+</package>
+<package name="DO35-7">
+<description>&lt;B&gt;DIODE&lt;/B&gt;&lt;p&gt;
+diameter 2 mm, horizontal, grid 7.62 mm</description>
+<wire x1="3.81" y1="0" x2="2.921" y2="0" width="0.508" layer="51"/>
+<wire x1="-3.81" y1="0" x2="-2.921" y2="0" width="0.508" layer="51"/>
+<wire x1="-0.635" y1="0" x2="0" y2="0" width="0.1524" layer="21"/>
+<wire x1="1.016" y1="0.635" x2="1.016" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="1.016" y1="-0.635" x2="0" y2="0" width="0.1524" layer="21"/>
+<wire x1="0" y1="0" x2="1.524" y2="0" width="0.1524" layer="21"/>
+<wire x1="0" y1="0" x2="1.016" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="0" y1="0.635" x2="0" y2="0" width="0.1524" layer="21"/>
+<wire x1="0" y1="0" x2="0" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="2.032" y1="1.016" x2="2.286" y2="0.762" width="0.1524" layer="21" curve="-90"/>
+<wire x1="2.286" y1="0.762" x2="2.286" y2="-0.762" width="0.1524" layer="21"/>
+<wire x1="2.032" y1="-1.016" x2="2.286" y2="-0.762" width="0.1524" layer="21" curve="90"/>
+<wire x1="-2.286" y1="0.762" x2="-2.032" y2="1.016" width="0.1524" layer="21" curve="-90"/>
+<wire x1="-2.286" y1="-0.762" x2="-2.032" y2="-1.016" width="0.1524" layer="21" curve="90"/>
+<wire x1="-2.032" y1="-1.016" x2="2.032" y2="-1.016" width="0.1524" layer="21"/>
+<wire x1="-2.286" y1="0.762" x2="-2.286" y2="-0.762" width="0.1524" layer="21"/>
+<wire x1="-2.032" y1="1.016" x2="2.032" y2="1.016" width="0.1524" layer="21"/>
+<pad name="C" x="-3.81" y="0" drill="0.8128" shape="long"/>
+<pad name="A" x="3.81" y="0" drill="0.8128" shape="long"/>
+<text x="-2.286" y="1.27" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-2.286" y="-2.667" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+<rectangle x1="-1.905" y1="-1.016" x2="-1.397" y2="1.016" layer="21"/>
+<rectangle x1="2.286" y1="-0.254" x2="2.921" y2="0.254" layer="21"/>
+<rectangle x1="-2.921" y1="-0.254" x2="-2.286" y2="0.254" layer="21"/>
+</package>
+</packages>
+<symbols>
+<symbol name="D">
+<wire x1="-1.27" y1="-1.27" x2="1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="1.27" y1="0" x2="-1.27" y2="1.27" width="0.254" layer="94"/>
+<wire x1="1.27" y1="1.27" x2="1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="1.27" x2="-1.27" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="1.27" y1="0" x2="1.27" y2="-1.27" width="0.254" layer="94"/>
+<text x="2.54" y="0.4826" size="1.778" layer="95">&gt;NAME</text>
+<text x="2.54" y="-2.3114" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="A" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
+<pin name="C" x="2.54" y="0" visible="off" length="short" direction="pas" rot="R180"/>
+<text x="-2.54" y="0" size="0.4064" layer="99" align="center">SpiceOrder 1</text>
+<text x="2.54" y="0" size="0.4064" layer="99" align="center">SpiceOrder 2</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="1N4148" prefix="D">
+<description>&lt;B&gt;DIODE&lt;/B&gt;&lt;p&gt;
+high speed (Philips)</description>
+<gates>
+<gate name="G$1" symbol="D" x="0" y="0"/>
+</gates>
+<devices>
+<device name="DO35-10" package="DO35-10">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="DO35-7" package="DO35-7">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -9515,7 +9768,7 @@ Spark Fun Electronics SKU : COM-00107</description>
 <part name="SENSOR_CURRENT" library="Probes" deviceset="CURRENT_MEASURE" device="_0.4A"/>
 <part name="R1" library="resistor" deviceset="R-EU_" device="0207/10"/>
 <part name="R3" library="resistor" deviceset="R-EU_" device="0207/10"/>
-<part name="U3" library="SparkFun-PowerIC" deviceset="V_REG_78XX" device="-TO-220"/>
+<part name="U3" library="SparkFun-PowerIC" deviceset="V_REG_78XX" device="-TO-220" value="7805-TO220"/>
 <part name="Q1" library="transistor-pnp" deviceset="2N3906" device=""/>
 <part name="Q2" library="transistor-pnp" deviceset="2N3906" device=""/>
 <part name="R4" library="rcl" deviceset="R-EU_" device="0207/10"/>
@@ -9524,6 +9777,9 @@ Spark Fun Electronics SKU : COM-00107</description>
 <part name="R7" library="rcl" deviceset="R-EU_" device="0207/10"/>
 <part name="R8" library="rcl" deviceset="R-EU_" device="0207/10"/>
 <part name="R9" library="rcl" deviceset="R-EU_" device="0207/10"/>
+<part name="U1" library="RHT03_DHT-22_AM2302" deviceset="RHT03_DHT-22_AM2302" device="" value="DHT22"/>
+<part name="R2" library="resistor" deviceset="R-EU_" device="0207/10" value="10K"/>
+<part name="D1" library="diode" deviceset="1N4148" device="DO35-10"/>
 </parts>
 <sheets>
 <sheet>
@@ -9542,19 +9798,25 @@ Diode to prevent leakage.</text>
 <text x="576.58" y="-60.96" size="6.4516" layer="94">Misc</text>
 <text x="421.64" y="-378.46" size="1.778" layer="94">(RF Module)</text>
 <text x="482.6" y="-378.46" size="1.778" layer="94">(Sensor Modules)</text>
-<wire x1="464.82" y1="-386.08" x2="464.82" y2="-368.3" width="0.1524" layer="94"/>
-<wire x1="464.82" y1="-368.3" x2="510.54" y2="-368.3" width="0.1524" layer="94"/>
+<wire x1="477.52" y1="-386.08" x2="477.52" y2="-368.3" width="0.1524" layer="94"/>
+<wire x1="477.52" y1="-368.3" x2="510.54" y2="-368.3" width="0.1524" layer="94"/>
 <wire x1="510.54" y1="-368.3" x2="510.54" y2="-386.08" width="0.1524" layer="94"/>
-<wire x1="510.54" y1="-386.08" x2="464.82" y2="-386.08" width="0.1524" layer="94"/>
+<wire x1="510.54" y1="-386.08" x2="477.52" y2="-386.08" width="0.1524" layer="94"/>
 <wire x1="414.02" y1="-368.3" x2="414.02" y2="-386.08" width="0.1524" layer="94"/>
 <wire x1="414.02" y1="-386.08" x2="444.5" y2="-386.08" width="0.1524" layer="94"/>
 <wire x1="444.5" y1="-386.08" x2="444.5" y2="-368.3" width="0.1524" layer="94"/>
 <wire x1="444.5" y1="-368.3" x2="414.02" y2="-368.3" width="0.1524" layer="94"/>
 <text x="543.56" y="-330.2" size="1.778" layer="97">Are NPNs on the ground side, or PNPs on the positive side better?
 
-NPNs are more efficient, but the voltage across the transistor or shunt may lead to issues with signals or regulators.</text>
+NPNs are more efficient, but the voltage across the transistor or shunt may lead to issues with signals or regulators.
+
+Hence PNPs are used</text>
 <text x="533.4" y="-299.72" size="1.778" layer="97">Battery Contact(s)</text>
 <text x="581.66" y="-76.2" size="1.778" layer="94">Fiducials</text>
+<text x="165.1" y="-368.3" size="1.778" layer="97">takes 3-5v, no need for regulator?</text>
+<text x="383.54" y="-353.06" size="1.778" layer="94">TODO: Something clever here that causes the transistor to additionally work as a controllable 3.3V
+ regulator, whilst not adding any leakage current when off?</text>
+<text x="203.2" y="-162.56" size="1.778" layer="94">Note: Arduino power might be higher voltage than 3V3 - should signal 1 to the device by just not driving it low (pullup resistor does the work).</text>
 </plain>
 <instances>
 <instance part="FD1" gate="G$1" x="599.44" y="-73.66"/>
@@ -9597,6 +9859,9 @@ NPNs are more efficient, but the voltage across the transistor or shunt may lead
 <instance part="R7" gate="G$1" x="233.68" y="-139.7"/>
 <instance part="R8" gate="G$1" x="236.22" y="-170.18"/>
 <instance part="R9" gate="G$1" x="236.22" y="-172.72"/>
+<instance part="U1" gate="G$1" x="154.94" y="-365.76"/>
+<instance part="R2" gate="G$1" x="119.38" y="-355.6" rot="R90"/>
+<instance part="D1" gate="G$1" x="388.62" y="-302.26"/>
 </instances>
 <busses>
 </busses>
@@ -9691,8 +9956,13 @@ NPNs are more efficient, but the voltage across the transistor or shunt may lead
 <label x="170.18" y="-99.06" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="193.04" y1="-398.78" x2="81.28" y2="-398.78" width="0.1524" layer="91"/>
+<wire x1="193.04" y1="-398.78" x2="124.46" y2="-398.78" width="0.1524" layer="91"/>
 <label x="109.22" y="-398.78" size="1.778" layer="95"/>
+<pinref part="U1" gate="G$1" pin="GND"/>
+<wire x1="124.46" y1="-398.78" x2="81.28" y2="-398.78" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="-373.38" x2="124.46" y2="-373.38" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="-373.38" x2="124.46" y2="-398.78" width="0.1524" layer="91"/>
+<junction x="124.46" y="-398.78"/>
 </segment>
 </net>
 <net name="AREF" class="4">
@@ -9991,7 +10261,7 @@ NPNs are more efficient, but the voltage across the transistor or shunt may lead
 <net name="VBAT" class="0">
 <segment>
 <label x="416.56" y="-302.26" size="1.778" layer="95"/>
-<wire x1="416.56" y1="-302.26" x2="439.42" y2="-302.26" width="0.1524" layer="91"/>
+<wire x1="391.16" y1="-302.26" x2="439.42" y2="-302.26" width="0.1524" layer="91"/>
 <pinref part="RF_CURRENT" gate="G$1" pin="P$1"/>
 <pinref part="SENSOR_CURRENT" gate="G$1" pin="P$1"/>
 <wire x1="500.38" y1="-302.26" x2="523.24" y2="-302.26" width="0.1524" layer="91"/>
@@ -10005,6 +10275,7 @@ NPNs are more efficient, but the voltage across the transistor or shunt may lead
 <junction x="528.32" y="-302.26"/>
 <junction x="528.32" y="-302.26"/>
 <junction x="523.24" y="-302.26"/>
+<pinref part="D1" gate="G$1" pin="C"/>
 </segment>
 </net>
 <net name="VBJ" class="0">
@@ -10044,11 +10315,12 @@ NPNs are more efficient, but the voltage across the transistor or shunt may lead
 <pinref part="R3" gate="G$1" pin="1"/>
 </segment>
 </net>
-<net name="N$7" class="0">
+<net name="5V_REG" class="0">
 <segment>
 <pinref part="U3" gate="G$1" pin="OUT"/>
-<wire x1="363.22" y1="-302.26" x2="373.38" y2="-302.26" width="0.1524" layer="91"/>
+<wire x1="363.22" y1="-302.26" x2="386.08" y2="-302.26" width="0.1524" layer="91"/>
 <label x="368.3" y="-302.26" size="1.778" layer="95"/>
+<pinref part="D1" gate="G$1" pin="A"/>
 </segment>
 </net>
 <net name="SENSOR_3V3" class="0">
@@ -10057,8 +10329,17 @@ NPNs are more efficient, but the voltage across the transistor or shunt may lead
 <label x="462.28" y="-363.22" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="88.9" y1="-332.74" x2="129.54" y2="-332.74" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="-332.74" x2="119.38" y2="-332.74" width="0.1524" layer="91"/>
 <label x="101.6" y="-330.2" size="1.778" layer="95"/>
+<pinref part="U1" gate="G$1" pin="VDD"/>
+<wire x1="119.38" y1="-332.74" x2="124.46" y2="-332.74" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="-332.74" x2="129.54" y2="-332.74" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="-358.14" x2="124.46" y2="-358.14" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="-358.14" x2="124.46" y2="-332.74" width="0.1524" layer="91"/>
+<junction x="124.46" y="-332.74"/>
+<pinref part="R2" gate="G$1" pin="2"/>
+<wire x1="119.38" y1="-350.52" x2="119.38" y2="-332.74" width="0.1524" layer="91"/>
+<junction x="119.38" y="-332.74"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -10102,6 +10383,22 @@ NPNs are more efficient, but the voltage across the transistor or shunt may lead
 <pinref part="R8" gate="G$1" pin="1"/>
 <pinref part="U6" gate="G$1" pin="(AIN0)PD6"/>
 <wire x1="231.14" y1="-170.18" x2="167.64" y2="-170.18" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="DHT22_DATA" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="DATA"/>
+<pinref part="R2" gate="G$1" pin="1"/>
+<wire x1="144.78" y1="-363.22" x2="119.38" y2="-363.22" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="-363.22" x2="119.38" y2="-360.68" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="-363.22" x2="83.82" y2="-363.22" width="0.1524" layer="91"/>
+<junction x="119.38" y="-363.22"/>
+<label x="91.44" y="-363.22" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U6" gate="G$1" pin="(ADC0)PC0)"/>
+<wire x1="167.64" y1="-162.56" x2="200.66" y2="-162.56" width="0.1524" layer="91"/>
+<label x="185.42" y="-162.56" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
