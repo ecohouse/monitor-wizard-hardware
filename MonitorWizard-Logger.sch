@@ -154,33 +154,6 @@
 </layers>
 <schematic xreflabel="%F%N/%S.%C%R" xrefpart="/%S.%C%R">
 <libraries>
-<library name="supply1">
-<packages>
-</packages>
-<symbols>
-<symbol name="+5V">
-<wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
-<wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
-<text x="-2.54" y="-5.08" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
-<pin name="+5V" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="+5V" prefix="P+">
-<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
-<gates>
-<gate name="1" symbol="+5V" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="rcl">
 <packages>
 <package name="C0402">
@@ -7931,7 +7904,6 @@ wire to board 2.54 mm (.1 inch) pitch header</description>
 <part name="U4-NRF24L01" library="Radios" deviceset="NRF24L01+" device="-PCB-AERIAL"/>
 <part name="RF_CURRENT" library="Probes" deviceset="CURRENT_MEASURE" device="_0.4A"/>
 <part name="ICSP2" library="SmartPrj" deviceset="PINHD-2X3" device="" value="3x2 M"/>
-<part name="P+12" library="supply1" deviceset="+5V" device=""/>
 <part name="AER" library="solpad" deviceset="LSP10" device=""/>
 <part name="GND" library="Probes" deviceset="ALLIGATOR" device=""/>
 <part name="VBAT" library="Probes" deviceset="ALLIGATOR" device=""/>
@@ -7955,11 +7927,15 @@ wire to board 2.54 mm (.1 inch) pitch header</description>
 <part name="J2" library="con-molex" deviceset="22-?-04" device="27-2041"/>
 <part name="J3" library="con-molex" deviceset="22-?-04" device="27-2041"/>
 <part name="R4" library="resistor" deviceset="R-EU_" device="0207/10" value="TBD"/>
+<part name="C3" library="rcl" deviceset="C-EU" device="025-024X044" value="0.1u"/>
+<part name="C4" library="rcl" deviceset="C-EU" device="025-024X044" value="0.1u"/>
+<part name="C5" library="rcl" deviceset="C-EU" device="025-024X044" value="0.1u"/>
+<part name="C6" library="rcl" deviceset="C-EU" device="025-024X044" value="0.1u"/>
+<part name="C7" library="rcl" deviceset="C-EU" device="025-024X044" value="0.1u"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
-<text x="93.98" y="-142.24" size="1.778" layer="91">TODO bigger pads</text>
 <text x="393.7" y="-60.96" size="6.4516" layer="94">RF Module</text>
 <text x="101.6" y="-55.88" size="6.4516" layer="94">Main Processor</text>
 <text x="119.38" y="-302.26" size="6.4516" layer="94">Sensors</text>
@@ -7984,7 +7960,6 @@ Diode to prevent leakage?</text>
 <text x="533.4" y="-299.72" size="1.778" layer="97">Battery Contact(s)</text>
 <text x="581.66" y="-76.2" size="1.778" layer="94">Fiducials</text>
 <text x="165.1" y="-368.3" size="1.778" layer="97">takes 3-5v, no need for regulator?</text>
-<text x="203.2" y="-162.56" size="1.778" layer="94">Note: Arduino power might be higher voltage than 3V3 - should signal 1 to the device by just not driving it low (pullup resistor does the work).</text>
 <text x="604.52" y="-294.64" size="1.778" layer="91">LTC3531EDD#PBF is leadfree adjustible version in 8-pin package (Farnell OC 1663711)
 
 Better to neglect the feedback, use the fixed 3.3v, and buy from Rapid: 59-4951
@@ -8007,6 +7982,8 @@ CHECK COMPATIBILITY: 2424133</text>
 <text x="530.86" y="-335.28" size="1.778" layer="91">Keystone 2464 Farnell 1704231</text>
 <text x="449.58" y="-363.22" size="1.778" layer="91" rot="R90">RF module uses little current in low power mode - no need to disconnect</text>
 <text x="607.06" y="-177.8" size="1.778" layer="91">DAT1/DAT2 used for high speed comms only</text>
+<text x="393.7" y="-309.88" size="1.778" layer="91">TODO use electrolytic somewhere nearby</text>
+<text x="167.64" y="-88.9" size="1.778" layer="91">5V (not used)</text>
 </plain>
 <instances>
 <instance part="FD1" gate="G$1" x="599.44" y="-73.66"/>
@@ -8024,9 +8001,6 @@ CHECK COMPATIBILITY: 2424133</text>
 <instance part="U4-NRF24L01" gate="G$1" x="459.74" y="-109.22" rot="R180"/>
 <instance part="RF_CURRENT" gate="G$1" x="439.42" y="-330.2"/>
 <instance part="ICSP2" gate="A" x="160.02" y="-96.52"/>
-<instance part="P+12" gate="1" x="175.26" y="-88.9" smashed="yes">
-<attribute name="VALUE" x="177.165" y="-86.36" size="1.778" layer="96" rot="R180"/>
-</instance>
 <instance part="AER" gate="1" x="408.94" y="-116.84" rot="R270"/>
 <instance part="GND" gate="G$1" x="525.78" y="-388.62" rot="R90"/>
 <instance part="VBAT" gate="G$1" x="525.78" y="-307.34" rot="R270"/>
@@ -8062,18 +8036,15 @@ CHECK COMPATIBILITY: 2424133</text>
 <instance part="J3" gate="-3" x="15.24" y="-396.24"/>
 <instance part="J3" gate="-4" x="15.24" y="-398.78"/>
 <instance part="R4" gate="G$1" x="-25.4" y="-330.2"/>
+<instance part="C3" gate="G$1" x="398.78" y="-73.66" rot="R180"/>
+<instance part="C4" gate="G$1" x="411.48" y="-73.66" rot="R180"/>
+<instance part="C5" gate="G$1" x="706.12" y="-185.42" rot="R180"/>
+<instance part="C6" gate="G$1" x="695.96" y="-185.42" rot="R180"/>
+<instance part="C7" gate="G$1" x="381" y="-314.96" rot="R180"/>
 </instances>
 <busses>
 </busses>
 <nets>
-<net name="+5V" class="3">
-<segment>
-<wire x1="175.26" y1="-91.44" x2="175.26" y2="-93.98" width="0.1524" layer="91"/>
-<wire x1="175.26" y1="-93.98" x2="165.1" y2="-93.98" width="0.1524" layer="91"/>
-<pinref part="P+12" gate="1" pin="+5V"/>
-<pinref part="ICSP2" gate="A" pin="2"/>
-</segment>
-</net>
 <net name="GND" class="2">
 <segment>
 <wire x1="528.32" y1="-393.7" x2="538.48" y2="-393.7" width="0.1524" layer="91"/>
@@ -8093,7 +8064,8 @@ CHECK COMPATIBILITY: 2424133</text>
 <wire x1="304.8" y1="-383.54" x2="304.8" y2="-393.7" width="0.1524" layer="91"/>
 <wire x1="304.8" y1="-393.7" x2="355.6" y2="-393.7" width="0.1524" layer="91"/>
 <junction x="304.8" y="-383.54"/>
-<wire x1="355.6" y1="-393.7" x2="520.7" y2="-393.7" width="0.1524" layer="91"/>
+<wire x1="355.6" y1="-393.7" x2="381" y2="-393.7" width="0.1524" layer="91"/>
+<wire x1="381" y1="-393.7" x2="520.7" y2="-393.7" width="0.1524" layer="91"/>
 <wire x1="520.7" y1="-393.7" x2="523.24" y2="-393.7" width="0.1524" layer="91"/>
 <wire x1="355.6" y1="-309.88" x2="355.6" y2="-393.7" width="0.1524" layer="91"/>
 <junction x="355.6" y="-393.7"/>
@@ -8117,24 +8089,35 @@ CHECK COMPATIBILITY: 2424133</text>
 <pinref part="U$2" gate="G$1" pin="-"/>
 <wire x1="520.7" y1="-363.22" x2="520.7" y2="-393.7" width="0.1524" layer="91"/>
 <junction x="520.7" y="-393.7"/>
+<pinref part="C7" gate="G$1" pin="1"/>
+<wire x1="381" y1="-317.5" x2="381" y2="-393.7" width="0.1524" layer="91"/>
+<junction x="381" y="-393.7"/>
 </segment>
 <segment>
-<wire x1="325.12" y1="-144.78" x2="401.32" y2="-144.78" width="0.1524" layer="91"/>
-<label x="325.12" y="-144.78" size="1.778" layer="95"/>
-<wire x1="401.32" y1="-144.78" x2="485.14" y2="-144.78" width="0.1524" layer="91"/>
-<wire x1="485.14" y1="-144.78" x2="487.68" y2="-144.78" width="0.1524" layer="91"/>
+<wire x1="342.9" y1="-127" x2="401.32" y2="-127" width="0.1524" layer="91"/>
+<label x="342.9" y="-127" size="1.778" layer="95"/>
+<wire x1="401.32" y1="-127" x2="485.14" y2="-127" width="0.1524" layer="91"/>
+<wire x1="485.14" y1="-127" x2="487.68" y2="-127" width="0.1524" layer="91"/>
 <wire x1="398.78" y1="-119.38" x2="401.32" y2="-119.38" width="0.1524" layer="91"/>
-<wire x1="401.32" y1="-119.38" x2="401.32" y2="-144.78" width="0.1524" layer="91"/>
-<junction x="401.32" y="-144.78"/>
+<wire x1="401.32" y1="-119.38" x2="401.32" y2="-127" width="0.1524" layer="91"/>
+<junction x="401.32" y="-127"/>
 <wire x1="398.78" y1="-114.3" x2="401.32" y2="-114.3" width="0.1524" layer="91"/>
 <wire x1="401.32" y1="-114.3" x2="401.32" y2="-119.38" width="0.1524" layer="91"/>
 <junction x="401.32" y="-119.38"/>
 <pinref part="U4-NRF24L01" gate="G$1" pin="GND"/>
 <wire x1="477.52" y1="-116.84" x2="485.14" y2="-116.84" width="0.1524" layer="91"/>
-<wire x1="485.14" y1="-116.84" x2="485.14" y2="-144.78" width="0.1524" layer="91"/>
-<junction x="485.14" y="-144.78"/>
+<wire x1="485.14" y1="-116.84" x2="485.14" y2="-127" width="0.1524" layer="91"/>
+<junction x="485.14" y="-127"/>
 <pinref part="U2" gate="G$1" pin="GND@1"/>
 <pinref part="U2" gate="G$1" pin="GND@2"/>
+<pinref part="C3" gate="G$1" pin="1"/>
+<pinref part="C4" gate="G$1" pin="1"/>
+<wire x1="398.78" y1="-76.2" x2="411.48" y2="-76.2" width="0.1524" layer="91"/>
+<wire x1="411.48" y1="-76.2" x2="416.56" y2="-76.2" width="0.1524" layer="91"/>
+<wire x1="416.56" y1="-76.2" x2="416.56" y2="-114.3" width="0.1524" layer="91"/>
+<junction x="411.48" y="-76.2"/>
+<wire x1="416.56" y1="-114.3" x2="401.32" y2="-114.3" width="0.1524" layer="91"/>
+<junction x="401.32" y="-114.3"/>
 </segment>
 <segment>
 <pinref part="U6" gate="G$1" pin="GND"/>
@@ -8183,15 +8166,15 @@ CHECK COMPATIBILITY: 2424133</text>
 <pinref part="CON1" gate="G$1" pin="GND1"/>
 <pinref part="CON1" gate="G$1" pin="GND"/>
 <junction x="657.86" y="-190.5"/>
-<label x="650.24" y="-193.04" size="1.778" layer="95"/>
-<wire x1="718.82" y1="-200.66" x2="657.86" y2="-200.66" width="0.1524" layer="91"/>
+<label x="650.24" y="-200.66" size="1.778" layer="95"/>
+<wire x1="718.82" y1="-200.66" x2="706.12" y2="-200.66" width="0.1524" layer="91"/>
+<wire x1="706.12" y1="-200.66" x2="657.86" y2="-200.66" width="0.1524" layer="91"/>
 <wire x1="657.86" y1="-200.66" x2="657.86" y2="-190.5" width="0.1524" layer="91"/>
 <wire x1="657.86" y1="-187.96" x2="657.86" y2="-190.5" width="0.1524" layer="91"/>
 <junction x="657.86" y="-187.96"/>
 <junction x="657.86" y="-190.5"/>
 <junction x="718.82" y="-190.5"/>
 <junction x="718.82" y="-185.42"/>
-<wire x1="657.86" y1="-190.5" x2="650.24" y2="-190.5" width="0.1524" layer="91"/>
 <pinref part="CON1" gate="G$1" pin="CARD_DETECT1"/>
 <pinref part="U$1" gate="G$1" pin="COMMON_SW"/>
 <wire x1="657.86" y1="-154.94" x2="718.82" y2="-154.94" width="0.1524" layer="91"/>
@@ -8204,6 +8187,12 @@ CHECK COMPATIBILITY: 2424133</text>
 <junction x="723.9" y="-200.66"/>
 <wire x1="657.86" y1="-200.66" x2="650.24" y2="-200.66" width="0.1524" layer="91"/>
 <junction x="657.86" y="-200.66"/>
+<pinref part="C6" gate="G$1" pin="1"/>
+<pinref part="C5" gate="G$1" pin="1"/>
+<wire x1="695.96" y1="-187.96" x2="706.12" y2="-187.96" width="0.1524" layer="91"/>
+<wire x1="706.12" y1="-187.96" x2="706.12" y2="-200.66" width="0.1524" layer="91"/>
+<junction x="706.12" y="-187.96"/>
+<junction x="706.12" y="-200.66"/>
 </segment>
 <segment>
 <pinref part="J1" gate="-4" pin="S"/>
@@ -8395,7 +8384,9 @@ CHECK COMPATIBILITY: 2424133</text>
 <segment>
 <wire x1="325.12" y1="-68.58" x2="368.3" y2="-68.58" width="0.1524" layer="91"/>
 <label x="325.12" y="-68.58" size="1.778" layer="95"/>
-<wire x1="368.3" y1="-68.58" x2="485.14" y2="-68.58" width="0.1524" layer="91"/>
+<wire x1="368.3" y1="-68.58" x2="398.78" y2="-68.58" width="0.1524" layer="91"/>
+<wire x1="398.78" y1="-68.58" x2="411.48" y2="-68.58" width="0.1524" layer="91"/>
+<wire x1="411.48" y1="-68.58" x2="485.14" y2="-68.58" width="0.1524" layer="91"/>
 <wire x1="485.14" y1="-68.58" x2="487.68" y2="-68.58" width="0.1524" layer="91"/>
 <junction x="368.3" y="-68.58"/>
 <pinref part="U4-NRF24L01" gate="G$1" pin="VCC"/>
@@ -8404,6 +8395,10 @@ CHECK COMPATIBILITY: 2424133</text>
 <wire x1="485.14" y1="-111.76" x2="485.14" y2="-68.58" width="0.1524" layer="91"/>
 <junction x="485.14" y="-68.58"/>
 <pinref part="U2" gate="G$1" pin="3.3V"/>
+<pinref part="C3" gate="G$1" pin="2"/>
+<junction x="398.78" y="-68.58"/>
+<pinref part="C4" gate="G$1" pin="2"/>
+<junction x="411.48" y="-68.58"/>
 </segment>
 <segment>
 <wire x1="421.64" y1="-363.22" x2="439.42" y2="-363.22" width="0.1524" layer="91"/>
@@ -8436,13 +8431,6 @@ CHECK COMPATIBILITY: 2424133</text>
 <label x="170.18" y="-170.18" size="1.778" layer="95"/>
 <pinref part="U6" gate="G$1" pin="(AIN0)PD6"/>
 <wire x1="193.04" y1="-170.18" x2="167.64" y2="-170.18" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="RFMODULE_MISC2" class="0">
-<segment>
-<pinref part="U6" gate="G$1" pin="(INT0)PD2"/>
-<label x="170.18" y="-180.34" size="1.778" layer="95"/>
-<wire x1="193.04" y1="-180.34" x2="167.64" y2="-180.34" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VBAT" class="0">
@@ -8522,6 +8510,8 @@ CHECK COMPATIBILITY: 2424133</text>
 <pinref part="IC1" gate="G$1" pin="OUT"/>
 <wire x1="363.22" y1="-302.26" x2="381" y2="-302.26" width="0.1524" layer="91"/>
 <label x="370.84" y="-299.72" size="1.778" layer="95"/>
+<pinref part="C7" gate="G$1" pin="2"/>
+<wire x1="381" y1="-309.88" x2="381" y2="-302.26" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U6" gate="G$1" pin="AVCC"/>
@@ -8541,13 +8531,19 @@ CHECK COMPATIBILITY: 2424133</text>
 <segment>
 <pinref part="U$1" gate="G$1" pin="VDD"/>
 <pinref part="CON1" gate="G$1" pin="VDD"/>
-<wire x1="718.82" y1="-180.34" x2="657.86" y2="-180.34" width="0.1524" layer="91"/>
+<wire x1="718.82" y1="-180.34" x2="706.12" y2="-180.34" width="0.1524" layer="91"/>
+<wire x1="706.12" y1="-180.34" x2="695.96" y2="-180.34" width="0.1524" layer="91"/>
+<wire x1="695.96" y1="-180.34" x2="657.86" y2="-180.34" width="0.1524" layer="91"/>
 <wire x1="657.86" y1="-180.34" x2="650.24" y2="-180.34" width="0.1524" layer="91"/>
 <junction x="657.86" y="-180.34"/>
 <label x="650.24" y="-180.34" size="1.778" layer="95"/>
+<pinref part="C5" gate="G$1" pin="2"/>
+<junction x="706.12" y="-180.34"/>
+<pinref part="C6" gate="G$1" pin="2"/>
+<junction x="695.96" y="-180.34"/>
 </segment>
 </net>
-<net name="EXT_SENSOR_POWER" class="0">
+<net name="SENSOR_POWER" class="0">
 <segment>
 <pinref part="SENSOR_CURRENT" gate="G$1" pin="P$1"/>
 <wire x1="487.68" y1="-322.58" x2="487.68" y2="-149.86" width="0.1524" layer="91"/>
@@ -8684,6 +8680,11 @@ CHECK COMPATIBILITY: 2424133</text>
 <pinref part="U2" gate="G$1" pin="DIO0"/>
 <wire x1="398.78" y1="-96.52" x2="398.78" y2="-81.28" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="U6" gate="G$1" pin="(INT0)PD2"/>
+<label x="170.18" y="-180.34" size="1.778" layer="95"/>
+<wire x1="193.04" y1="-180.34" x2="167.64" y2="-180.34" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="RFMODULE_CS" class="0">
 <segment>
@@ -8760,24 +8761,6 @@ CHECK COMPATIBILITY: 2424133</text>
 <label x="-10.16" y="-396.24" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="DHT22_3V3" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="VDD"/>
-<wire x1="144.78" y1="-358.14" x2="124.46" y2="-358.14" width="0.1524" layer="91"/>
-<wire x1="124.46" y1="-358.14" x2="124.46" y2="-332.74" width="0.1524" layer="91"/>
-<pinref part="R3" gate="G$1" pin="2"/>
-<wire x1="119.38" y1="-350.52" x2="119.38" y2="-332.74" width="0.1524" layer="91"/>
-<label x="101.6" y="-330.2" size="1.778" layer="95"/>
-<wire x1="124.46" y1="-332.74" x2="119.38" y2="-332.74" width="0.1524" layer="91"/>
-<wire x1="119.38" y1="-332.74" x2="111.76" y2="-332.74" width="0.1524" layer="91"/>
-<junction x="119.38" y="-332.74"/>
-</segment>
-<segment>
-<pinref part="U6" gate="G$1" pin="(AIN1)PD7"/>
-<wire x1="167.64" y1="-167.64" x2="193.04" y2="-167.64" width="0.1524" layer="91"/>
-<label x="170.18" y="-167.64" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="EXT_ANALOG_0_TIM" class="0">
 <segment>
 <pinref part="U6" gate="G$1" pin="(ADC0)PC0)"/>
@@ -8794,16 +8777,33 @@ CHECK COMPATIBILITY: 2424133</text>
 <label x="-10.16" y="-345.44" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="EXT_SENSOR_3V3" class="0">
+<net name="SENSOR_3V3" class="0">
 <segment>
+<wire x1="462.28" y1="-363.22" x2="487.68" y2="-363.22" width="0.1524" layer="91"/>
+<label x="462.28" y="-363.22" size="1.778" layer="95"/>
+<pinref part="SENSOR_CURRENT" gate="G$1" pin="P$2"/>
+<wire x1="487.68" y1="-363.22" x2="502.92" y2="-363.22" width="0.1524" layer="91"/>
+<wire x1="487.68" y1="-337.82" x2="487.68" y2="-363.22" width="0.1524" layer="91"/>
+<junction x="487.68" y="-363.22"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="VDD"/>
+<wire x1="144.78" y1="-358.14" x2="124.46" y2="-358.14" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="-358.14" x2="124.46" y2="-332.74" width="0.1524" layer="91"/>
+<pinref part="R3" gate="G$1" pin="2"/>
+<wire x1="119.38" y1="-350.52" x2="119.38" y2="-332.74" width="0.1524" layer="91"/>
+<label x="101.6" y="-330.2" size="1.778" layer="95"/>
+<wire x1="124.46" y1="-332.74" x2="119.38" y2="-332.74" width="0.1524" layer="91"/>
+<junction x="119.38" y="-332.74"/>
 <pinref part="J1" gate="-1" pin="S"/>
 <wire x1="12.7" y1="-342.9" x2="-30.48" y2="-342.9" width="0.1524" layer="91"/>
 <pinref part="J2" gate="-1" pin="S"/>
 <wire x1="12.7" y1="-368.3" x2="-30.48" y2="-368.3" width="0.1524" layer="91"/>
 <wire x1="-30.48" y1="-368.3" x2="-30.48" y2="-342.9" width="0.1524" layer="91"/>
-<wire x1="-30.48" y1="-330.2" x2="-30.48" y2="-342.9" width="0.1524" layer="91"/>
+<wire x1="-30.48" y1="-330.2" x2="-30.48" y2="-332.74" width="0.1524" layer="91"/>
 <junction x="-30.48" y="-342.9"/>
 <pinref part="J3" gate="-1" pin="S"/>
+<wire x1="-30.48" y1="-332.74" x2="-30.48" y2="-342.9" width="0.1524" layer="91"/>
 <wire x1="12.7" y1="-391.16" x2="-30.48" y2="-391.16" width="0.1524" layer="91"/>
 <wire x1="-30.48" y1="-391.16" x2="-30.48" y2="-368.3" width="0.1524" layer="91"/>
 <junction x="-30.48" y="-368.3"/>
@@ -8814,14 +8814,8 @@ CHECK COMPATIBILITY: 2424133</text>
 <label x="-10.16" y="-342.9" size="1.778" layer="95"/>
 <label x="-10.16" y="-368.3" size="1.778" layer="95"/>
 <label x="-10.16" y="-391.16" size="1.778" layer="95"/>
-</segment>
-<segment>
-<wire x1="462.28" y1="-363.22" x2="487.68" y2="-363.22" width="0.1524" layer="91"/>
-<label x="462.28" y="-363.22" size="1.778" layer="95"/>
-<pinref part="SENSOR_CURRENT" gate="G$1" pin="P$2"/>
-<wire x1="487.68" y1="-363.22" x2="502.92" y2="-363.22" width="0.1524" layer="91"/>
-<wire x1="487.68" y1="-337.82" x2="487.68" y2="-363.22" width="0.1524" layer="91"/>
-<junction x="487.68" y="-363.22"/>
+<wire x1="119.38" y1="-332.74" x2="-30.48" y2="-332.74" width="0.1524" layer="91"/>
+<junction x="-30.48" y="-332.74"/>
 </segment>
 </net>
 </nets>
