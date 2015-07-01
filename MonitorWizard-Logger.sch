@@ -7984,6 +7984,7 @@ CHECK COMPATIBILITY: 2424133</text>
 <text x="607.06" y="-177.8" size="1.778" layer="91">DAT1/DAT2 used for high speed comms only</text>
 <text x="393.7" y="-309.88" size="1.778" layer="91">TODO use electrolytic somewhere nearby</text>
 <text x="167.64" y="-88.9" size="1.778" layer="91">5V (not used)</text>
+<text x="193.04" y="-129.54" size="1.778" layer="91">Impedance at the source to prevent reflections?</text>
 </plain>
 <instances>
 <instance part="FD1" gate="G$1" x="599.44" y="-73.66"/>
