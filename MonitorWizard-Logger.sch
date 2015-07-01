@@ -3320,7 +3320,6 @@ Some dimensions should be measured - silkscreen is approximate, hole diameter un
 <wire x1="-5.08" y1="26.46" x2="10" y2="26.46" width="0.127" layer="21"/>
 <wire x1="10" y1="26.46" x2="10" y2="-2.54" width="0.127" layer="21"/>
 <wire x1="10" y1="-2.54" x2="-5.08" y2="-2.54" width="0.127" layer="21"/>
-<text x="-12.7" y="11.43" size="1.27" layer="21">UNFINISHED - DO NOT COMPLETE DESIGN. SEE DESCRIPTION</text>
 </package>
 </packages>
 <symbols>

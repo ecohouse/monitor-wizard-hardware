@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="2" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
@@ -86,7 +86,6 @@ Some dimensions should be measured - silkscreen is approximate, hole diameter un
 <wire x1="-5.08" y1="26.46" x2="10" y2="26.46" width="0.127" layer="21"/>
 <wire x1="10" y1="26.46" x2="10" y2="-2.54" width="0.127" layer="21"/>
 <wire x1="10" y1="-2.54" x2="-5.08" y2="-2.54" width="0.127" layer="21"/>
-<text x="-12.7" y="11.43" size="1.27" layer="21">UNFINISHED - DO NOT COMPLETE DESIGN. SEE DESCRIPTION</text>
 </package>
 <package name="RFM12B">
 <wire x1="-8" y1="8" x2="8" y2="8" width="0.127" layer="21"/>
