@@ -7901,14 +7901,14 @@ wire to board 2.54 mm (.1 inch) pitch header</description>
 <part name="C12" library="rcl" deviceset="C-EU" device="025-024X044" value="0.1u"/>
 <part name="C13" library="rcl" deviceset="C-EU" device="025-024X044" value="0.1u"/>
 <part name="U4-NRF24L01" library="Radios" deviceset="NRF24L01+" device="-PCB-AERIAL"/>
-<part name="RF_CURRENT" library="Probes" deviceset="CURRENT_MEASURE" device="_0.4A"/>
+<part name="I_RF" library="Probes" deviceset="CURRENT_MEASURE" device="_0.4A"/>
 <part name="ICSP2" library="SmartPrj" deviceset="PINHD-2X3" device="" value="3x2 M"/>
 <part name="AER" library="solpad" deviceset="LSP10" device=""/>
 <part name="GND" library="Probes" deviceset="ALLIGATOR" device=""/>
 <part name="VBAT" library="Probes" deviceset="ALLIGATOR" device=""/>
 <part name="X3" library="SmartPrj" deviceset="POWERSUPPLY_DC21MM" device="X"/>
 <part name="FD4" library="SmartPrj" deviceset="FIDUCIALMOUNT" device=""/>
-<part name="SENSOR_CURRENT" library="Probes" deviceset="CURRENT_MEASURE" device="_0.4A"/>
+<part name="I_SENSE" library="Probes" deviceset="CURRENT_MEASURE" device="_0.4A"/>
 <part name="U1" library="RHT03_DHT-22_AM2302" deviceset="RHT03_DHT-22_AM2302" device="" value="DHT22"/>
 <part name="R3" library="resistor" deviceset="R-EU_" device="0207/10" value="10K"/>
 <part name="U2" library="SparkFun-RF" deviceset="RFM69H" device="W"/>
@@ -7999,7 +7999,7 @@ CHECK COMPATIBILITY: 2424133</text>
 <instance part="C12" gate="G$1" x="101.6" y="-165.1" rot="R180"/>
 <instance part="C13" gate="G$1" x="101.6" y="-180.34" rot="R180"/>
 <instance part="U4-NRF24L01" gate="G$1" x="459.74" y="-109.22" rot="R180"/>
-<instance part="RF_CURRENT" gate="G$1" x="439.42" y="-330.2"/>
+<instance part="I_RF" gate="G$1" x="439.42" y="-330.2"/>
 <instance part="ICSP2" gate="A" x="160.02" y="-96.52"/>
 <instance part="AER" gate="1" x="408.94" y="-116.84" rot="R270"/>
 <instance part="GND" gate="G$1" x="525.78" y="-388.62" rot="R90"/>
@@ -8009,7 +8009,7 @@ CHECK COMPATIBILITY: 2424133</text>
 <attribute name="VALUE" x="299.72" y="-355.6" size="1.27" layer="94"/>
 </instance>
 <instance part="FD4" gate="G$1" x="599.44" y="-88.9"/>
-<instance part="SENSOR_CURRENT" gate="G$1" x="487.68" y="-330.2"/>
+<instance part="I_SENSE" gate="G$1" x="487.68" y="-330.2"/>
 <instance part="U1" gate="G$1" x="154.94" y="-365.76"/>
 <instance part="R3" gate="G$1" x="119.38" y="-355.6" rot="R90"/>
 <instance part="U2" gate="G$1" x="383.54" y="-109.22"/>
@@ -8403,7 +8403,7 @@ CHECK COMPATIBILITY: 2424133</text>
 <segment>
 <wire x1="421.64" y1="-363.22" x2="439.42" y2="-363.22" width="0.1524" layer="91"/>
 <label x="419.1" y="-363.22" size="1.778" layer="95"/>
-<pinref part="RF_CURRENT" gate="G$1" pin="P$2"/>
+<pinref part="I_RF" gate="G$1" pin="P$2"/>
 <wire x1="439.42" y1="-337.82" x2="439.42" y2="-363.22" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -8490,7 +8490,7 @@ CHECK COMPATIBILITY: 2424133</text>
 </net>
 <net name="3V3" class="0">
 <segment>
-<pinref part="RF_CURRENT" gate="G$1" pin="P$1"/>
+<pinref part="I_RF" gate="G$1" pin="P$1"/>
 <wire x1="439.42" y1="-322.58" x2="439.42" y2="-302.26" width="0.1524" layer="91"/>
 <label x="441.96" y="-312.42" size="1.778" layer="95"/>
 </segment>
@@ -8545,7 +8545,7 @@ CHECK COMPATIBILITY: 2424133</text>
 </net>
 <net name="SENSOR_POWER" class="0">
 <segment>
-<pinref part="SENSOR_CURRENT" gate="G$1" pin="P$1"/>
+<pinref part="I_SENSE" gate="G$1" pin="P$1"/>
 <wire x1="487.68" y1="-322.58" x2="487.68" y2="-149.86" width="0.1524" layer="91"/>
 <wire x1="487.68" y1="-149.86" x2="195.58" y2="-149.86" width="0.1524" layer="91"/>
 <wire x1="195.58" y1="-149.86" x2="195.58" y2="-142.24" width="0.1524" layer="91"/>
@@ -8781,7 +8781,7 @@ CHECK COMPATIBILITY: 2424133</text>
 <segment>
 <wire x1="462.28" y1="-363.22" x2="487.68" y2="-363.22" width="0.1524" layer="91"/>
 <label x="462.28" y="-363.22" size="1.778" layer="95"/>
-<pinref part="SENSOR_CURRENT" gate="G$1" pin="P$2"/>
+<pinref part="I_SENSE" gate="G$1" pin="P$2"/>
 <wire x1="487.68" y1="-363.22" x2="502.92" y2="-363.22" width="0.1524" layer="91"/>
 <wire x1="487.68" y1="-337.82" x2="487.68" y2="-363.22" width="0.1524" layer="91"/>
 <junction x="487.68" y="-363.22"/>
