@@ -16257,6 +16257,7 @@ Theres also a lot of work from other, mostly unknown, contributors included in t
 <part name="C8" library="rcl" deviceset="CPOL-EU" device="E2.5-6"/>
 <part name="JP2" library="SparkFun-Connectors" deviceset="POWER_JACK" device="PTH"/>
 <part name="U3" library="custom" deviceset="LTC3531" device=""/>
+<part name="C9" library="rcl" deviceset="C-EU" device="025-024X044" value="0.1u"/>
 </parts>
 <sheets>
 <sheet>
@@ -16361,6 +16362,7 @@ CHECK COMPATIBILITY: 2424133</text>
 <instance part="C8" gate="G$1" x="391.16" y="-342.9"/>
 <instance part="JP2" gate="G$1" x="307.34" y="-360.68"/>
 <instance part="U3" gate="G$1" x="584.2" y="-312.42"/>
+<instance part="C9" gate="G$1" x="139.7" y="-345.44" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -16525,7 +16527,8 @@ CHECK COMPATIBILITY: 2424133</text>
 <wire x1="-10.16" y1="-411.48" x2="-12.7" y2="-411.48" width="0.1524" layer="91"/>
 <wire x1="-12.7" y1="-411.48" x2="-15.24" y2="-411.48" width="0.1524" layer="91"/>
 <wire x1="-15.24" y1="-411.48" x2="-25.4" y2="-411.48" width="0.1524" layer="91"/>
-<wire x1="144.78" y1="-373.38" x2="124.46" y2="-373.38" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="-373.38" x2="139.7" y2="-373.38" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="-373.38" x2="124.46" y2="-373.38" width="0.1524" layer="91"/>
 <wire x1="124.46" y1="-373.38" x2="124.46" y2="-411.48" width="0.1524" layer="91"/>
 <junction x="124.46" y="-411.48"/>
 <wire x1="-10.16" y1="-398.78" x2="-10.16" y2="-411.48" width="0.1524" layer="91"/>
@@ -16534,6 +16537,9 @@ CHECK COMPATIBILITY: 2424133</text>
 <junction x="-12.7" y="-411.48"/>
 <wire x1="-15.24" y1="-350.52" x2="-15.24" y2="-411.48" width="0.1524" layer="91"/>
 <junction x="-15.24" y="-411.48"/>
+<pinref part="C9" gate="G$1" pin="1"/>
+<wire x1="139.7" y1="-347.98" x2="139.7" y2="-373.38" width="0.1524" layer="91"/>
+<junction x="139.7" y="-373.38"/>
 </segment>
 </net>
 <net name="AREF" class="4">
@@ -17090,8 +17096,9 @@ CHECK COMPATIBILITY: 2424133</text>
 <segment>
 <pinref part="U1" gate="G$1" pin="VDD"/>
 <wire x1="144.78" y1="-358.14" x2="124.46" y2="-358.14" width="0.1524" layer="91"/>
-<wire x1="124.46" y1="-358.14" x2="124.46" y2="-332.74" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="-358.14" x2="124.46" y2="-340.36" width="0.1524" layer="91"/>
 <pinref part="R3" gate="G$1" pin="2"/>
+<wire x1="124.46" y1="-340.36" x2="124.46" y2="-332.74" width="0.1524" layer="91"/>
 <wire x1="119.38" y1="-350.52" x2="119.38" y2="-332.74" width="0.1524" layer="91"/>
 <label x="101.6" y="-330.2" size="1.778" layer="95"/>
 <wire x1="124.46" y1="-332.74" x2="119.38" y2="-332.74" width="0.1524" layer="91"/>
@@ -17117,6 +17124,9 @@ CHECK COMPATIBILITY: 2424133</text>
 <label x="-10.16" y="-391.16" size="1.778" layer="95"/>
 <wire x1="119.38" y1="-332.74" x2="-30.48" y2="-332.74" width="0.1524" layer="91"/>
 <junction x="-30.48" y="-332.74"/>
+<pinref part="C9" gate="G$1" pin="2"/>
+<wire x1="124.46" y1="-340.36" x2="139.7" y2="-340.36" width="0.1524" layer="91"/>
+<junction x="124.46" y="-340.36"/>
 </segment>
 </net>
 </nets>
